@@ -1,13 +1,8 @@
 import streamlit as st
 
-st.title("My new app💫", anchor=False)
-st.header("Ich bin eine neue Überschrif", anchor=False)
-st.subheader("Noch eine kleinere Überschrift💖", anchor=False)
-st.write("Das ist meine Streamlit-App✨")
-
-st.markdown("<p>Ich bin ein Text</p>", unsafe_allow_html=True)
-
-st.markdown("<a href='https://www.google.at'>Link<a/>", unsafe_allow_html=True)
+left, right = st.columns(2)
+left.image("Bild.jpg", width=200)
+right.header("Milana Bondar")
 
 st.header("IT-Kompetenz", anchor=False, divider="blue") 
 
@@ -45,9 +40,9 @@ st.markdown("""
 
 st.header("Interessen und Hobbys", anchor=False, divider="blue") 
 st.markdown("""
-        - ⚽ Fußball: Mitglied in einem Fußball-Klub
-        - 📘 Lesen: Begeisterte Leserin verschiedenster Literatur
-        - ♟️ Schach: Engagiert im Schachklub""")
+        - 💻 Programmieren (HTML, Streamlit, Python)
+        - 🎹 Klavier spielen (Schloss die Musikschule (9 Studienjahre) mit Auszeichnung ab)
+        - 🏊🏻 Schwimmen (Ich schwimme seit 6 Jahr in einer Proffigruppe)""")
 
 
 

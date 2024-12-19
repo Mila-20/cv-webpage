@@ -1,48 +1,144 @@
 import streamlit as st
+from pathlib import Path
+
+st.markdown("<style> .stAppHeader {display:none;} ul {list-style-type: none; } </style>", unsafe_allow_html=True)
+
+def get_file_content_as_bytes(file_path):
+    with open(file_path, "rb") as file:
+        return file.read()
+
+# Pfad zur PDF-Datei
+file_path = 'Lebenslauf.pdf'
+
+st.write("")
+
+# Lese den Inhalt der PDF-Datei als Bytes
+file_bytes = get_file_content_as_bytes(file_path)
+
 
 left, right = st.columns(2)
-left.image("Bild.jpg", width=200)
-right.header("Milana Bondar")
+left.image("profile-pic.png", width=250)
+
+with right:
+ st.markdown("""
+        <h3>Milana Bondar</h3>
+        <em>Ich bin davon überzeugt, dass KI die Welt verändern wird   
+        und ich möchte ein Teil davon sein.</em>  
+            
+        🏠 *Hertha-Firnberg-Straße7*             
+        📇 *1100 Wien*            
+        📱  *Mobil: +43 066 08613308*                        
+         """, unsafe_allow_html=True)
+ 
+ st.write("")
+
+with right:
+ st.download_button(
+                label="📄 Download Lebenslauf",
+                data=file_bytes,
+                file_name=file_path,
+                mime='application/pdf'
+    )
+with right:
+ st.write("📩", "milana.bondar.79@gmail.com")
+
+
+st.write("")
+st.write("")        
 
 st.header("IT-Kompetenz", anchor=False, divider="blue") 
 
 st.markdown("""
-        - 🗺️ Webentwicklung: Fundierte Grundkenntnisse in HTML, CSS und Streamlit (Fullstack-Framework)
-        - 💻 Programmierung: Praktische Erfahrung in Python, Entwicklung kleiner Anwendungen und Skripte
-        - 👩🏻‍💼 Office-Suite: Versierter Umgang mit Microsoft Word, Excel und PowerPoint
-        - 📊 Eigene Projekte: Konzeption und Umsetzung verschiedener Projekte inklusive Hosting
-        - 🎒 Schulprojekte: Erstellung datenbasierter Präsentationen und interaktiver Tabellenkalkulationen""",)
+        👩🏻‍💼 Office: Guter Umfang mit Powerpoint, Excel und Word    
+        💻 Programmier Sprachen:HTML, Python  
+        👩🏻‍💻 Programmierung: Praktische Erfahrung in Python, Entwicklung kleine Website  
+        📊 Eigene Projekte: Konzeption und Umsetzung verschiedener Projekte inklusive diese Website  
+        🎒 Schule: Fach Bereich IT mit positivem Erfolg 
+            """,)  
 
-st.header("Arbeitserfahrung", anchor=False, divider="blue") 
-st.subheader("Fachmittelschule Schaumburgergasse, Wien", anchor=False)
-st.markdown("""
-       - ► Schwerpunkt: Intensive IT-Spezialisierung, Fokus auf modernen Webtechnologien und Wirtschaft
-       - ► Zeitraum: September 2024 - Juli 2025
-       - ► Derzeitiger Notenschnitt: 1,5""")
-
-st.subheader("Mittelschule Kayniongasse, Wien", anchor=False)
-st.markdown("""
-      -  ► Zeitraum: September 2020 – Juli 2024
-      -  ► Abschluss-Notendurchschnitt: 1,7""")
-            
+st.write("")
+st.write("")
 
 st.header("Schulbildung", anchor=False, divider="blue") 
+st.markdown("🛠️ Berufspraktische Tage 1: Gesundheitszentrum Favoriten, Wien - 18./22.11.2024")
 
-st.markdown("""
-        - 🛠️ Berufspraktische Tage 1: Bei XYZ von 18. bis 22. Nov. 2024
-        - 🛠️ Berufspraktische Tage 2: Bei XYZ von 24. bis 28. Feb. 2025""")
+st.write("")
 
-st.header("Zusätzliche Qualifikationen", anchor=False, divider="blue") 
-st.markdown("""
-        - 💨 Schnelle Auffassungsgabe für neue Softwareanwendungen und Technologien
-        - 💨 Großes Interesse an der kontinuierlichen Weiterentwicklung im IT-Bereich
-        - 💨 Teamfähigkeit und Kommunikationsstärke bei gemeinsamen Coding-Projekten""")
+st.header("Sprachen", anchor=False, divider="blue") 
+
+import streamlit as st
+
+st.subheader("English", anchor=False)
+levels = ("A1", "A2", "B1", "B2", "C1", "C2") 
+levels = st.select_slider("", options=levels, value="B2")
+
+st.subheader("German", anchor=False)
+levels = ("A1", "A2", "B1", "B2", "C1", "C2") 
+levels = st.select_slider("", options=levels, value="B1")
+
+st.subheader("Ukrainian", anchor=False)
+levels = ("A1", "A2", "B1", "B2", "C1", "C2") 
+levels = st.select_slider("", options=levels, value="C2")
+
+st.subheader("Russian", anchor=False)
+levels = ("A1", "A2", "B1", "B2", "C1", "C2") 
+levels = st.select_slider("", options=levels, value="C1")
+
+st.write("")
+st.write("")
+st.write("")
+st.write("")
 
 st.header("Interessen und Hobbys", anchor=False, divider="blue") 
 st.markdown("""
-        - 💻 Programmieren (HTML, Streamlit, Python)
-        - 🎹 Klavier spielen (Schloss die Musikschule (9 Studienjahre) mit Auszeichnung ab)
-        - 🏊🏻 Schwimmen (Ich schwimme seit 6 Jahr in einer Proffigruppe)""")
+        💻 Programmieren (HTML, Streamlit, Python)  
+        🎹 Klavier spielen (Schloss die Musikschule (9 Studienjahre) mit Auszeichnung ab)  
+        🏊🏻 Schwimmen (Ich schwimme seit 6 Jahr in einer Proffigruppe)  
+        🧁 Kochen    
+        🎶 Musik hören  
+        """)
 
+st.header("Schulbildung", anchor=False, divider="blue")
+st.markdown("""
+        2023-2024 – Wienerberg Mittelschule 
+
+        Fachmittelschule Schaumburgergasse, Wien    
+        ► Schwerpunkt: Intensive IT-Spezialisierung, Fokus auf modernen Webtechnologien und Wirtschaft  
+        ► Zeitraum: September 2024 - Juli 2025  
+            
+        2014-2026 – Gymnasium (ukrainische)  
+        """) 
+
+st.header("Eigenschaften", anchor=False, divider="blue")
+st.markdown("""
+        🗣️ Kontaktfreudig  
+        👩🏻‍🤝‍👩🏼 Freundlich  
+        ⌛ Organisiert  
+        🤝🏻 Teamfähig  
+        🫶🏻 Hilfsbereit  
+            """)
+
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+
+left, right = st.columns(2)
+
+with left:
+        st.link_button("Zeugnis FMS4", "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite")
+     
+with right:
+        st.link_button("Mittelschule Zeugnis", "https://www.wikipedia.org/")
+ 
+left, right = st.columns(2)
+
+with left:
+        st.link_button("Ukrainishe Zeugnis", "https://www.wikipedia.at/")
+        
+with right:
+        st.link_button("Lebenslauf", "https://www.cvmaker.de/lebenslauf-vorlagen?msclkid=389b2e9844a01149bf4a49fb95294be4&utm_source=bing&utm_medium=cpc&utm_campaign=1.0%20Algemeen%20(AT)&utm_term=lebenslauf&utm_content=lebenslauf")
+
+        st.link_button("Bewerbung", "https://www.ams.at/arbeitsuchende/richtig-bewerben")
 
 

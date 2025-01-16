@@ -82,7 +82,7 @@ levels = st.select_slider("", options=levels, value="C2")
 
 st.subheader("Russian", anchor=False)
 levels = ("A1", "A2", "B1", "B2", "C1", "C2") 
-levels = st.select_slider("", options=levels, value="C1")
+levels = st.select_slider("", options=levels, value="C2")
 
 st.write("")
 st.write("")

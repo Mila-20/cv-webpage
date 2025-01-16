@@ -131,7 +131,7 @@ with left:
      
 with left:
         # Pfad zur PDF-Datei
-        file_path = 'Mittelschule.jpg'
+        file_path = 'Mittelschule.pdf'
 
 st.write("")
 
@@ -150,7 +150,7 @@ with left:
 left, right = st.columns(2)
 
 # Pfad zur PDF-Datei
-file_path = 'ZeugnisUkrainische.jpg'
+file_path = 'Ukrainische.pdf'
 
 st.write("")
 
@@ -188,7 +188,7 @@ with left:
 left, right = st.columns(2)
 
 # Pfad zur PDF-Datei
-file_path = '10.Schuljahr.jpg'
+file_path = '10.Schuljahr.pdf'
 
 st.write("")
 

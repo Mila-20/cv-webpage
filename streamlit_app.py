@@ -50,7 +50,7 @@ st.header("IT-Kompetenz", anchor=False, divider="blue")
 
 st.markdown("""
         👩🏻‍💼 Office: Guter Umfang mit Powerpoint, Excel und Word    
-        💻 Programmier Sprachen:HTML, Python  
+        💻 Programmiersprachen:HTML, Python  
         👩🏻‍💻 Programmierung: Praktische Erfahrung in Python, Entwicklung kleine Website  
         📊 Eigene Projekte: Konzeption und Umsetzung verschiedener Projekte inklusive diese Website  
         🎒 Schule: Fach Bereich IT mit positivem Erfolg 
@@ -92,7 +92,7 @@ st.write("")
 st.header("Interessen und Hobbys", anchor=False, divider="blue") 
 st.markdown("""
         💻 Programmieren (HTML, Streamlit, Python)  
-        🎹 Klavier spielen (Schloss die Musikschule (9 Studienjahre) mit Auszeichnung ab)  
+        🎹 Klavier spielen (Schloss die Musikschule -9 Studienjahre mit Auszeichnung ab)  
         🏊🏻 Schwimmen (Ich schwimme seit 6 Jahr in einer Proffigruppe)  
         🧁 Kochen    
         🎶 Musik hören  
@@ -127,18 +127,78 @@ left, right = st.columns(2)
 
 with left:
         st.link_button("Zeugnis FMS4", "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite")
+
      
-with right:
-        st.link_button("Mittelschule Zeugnis", "https://www.wikipedia.org/")
+with left:
+        # Pfad zur PDF-Datei
+        file_path = 'Mittelschule.jpg'
+
+st.write("")
+
+# Lese den Inhalt der PDF-Datei als Bytes
+file_bytes = get_file_content_as_bytes(file_path)
+with left:
+      with right:
+        st.download_button(
+                label="Mittelschule Zeugnis",
+                data=file_bytes,
+                file_name=file_path,
+                mime='application/pdf')
+        
  
+
 left, right = st.columns(2)
 
+# Pfad zur PDF-Datei
+file_path = 'ZeugnisUkrainische.jpg'
+
+st.write("")
+
+# Lese den Inhalt der PDF-Datei als Bytes
+file_bytes = get_file_content_as_bytes(file_path)
 with left:
-        st.link_button("Ukrainishe Zeugnis", "https://www.wikipedia.at/")
+      with right:
+        st.download_button(
+                label="Ukrainische Zeugnis 9. Schuljahr",
+                data=file_bytes,
+                file_name=file_path,
+                mime='application/pdf')
         
-with right:
-        st.link_button("Lebenslauf", "https://www.cvmaker.de/lebenslauf-vorlagen?msclkid=389b2e9844a01149bf4a49fb95294be4&utm_source=bing&utm_medium=cpc&utm_campaign=1.0%20Algemeen%20(AT)&utm_term=lebenslauf&utm_content=lebenslauf")
+        
 
-        st.link_button("Bewerbung", "https://www.ams.at/arbeitsuchende/richtig-bewerben")
+with left:
+        left, right = st.columns(2)
 
+# Pfad zur PDF-Datei
+file_path = 'Bewerbung.pdf'
+
+st.write("")
+
+# Lese den Inhalt der PDF-Datei als Bytes
+file_bytes = get_file_content_as_bytes(file_path)
+with left:
+      with left:
+        st.download_button(
+                label="Bewerbung",
+                data=file_bytes,
+                file_name=file_path,
+                mime='application/pdf')
+        
+
+left, right = st.columns(2)
+
+# Pfad zur PDF-Datei
+file_path = '10.Schuljahr.jpg'
+
+st.write("")
+
+# Lese den Inhalt der PDF-Datei als Bytes
+file_bytes = get_file_content_as_bytes(file_path)
+with left:
+      with right:
+        st.download_button(
+                label="Ukrainische Zeugnis 10. Schuljahr",
+                data=file_bytes,
+                file_name=file_path,
+                mime='application/pdf')
 

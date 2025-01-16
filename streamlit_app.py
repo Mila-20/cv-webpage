@@ -51,8 +51,8 @@ st.header("IT-Kompetenz", anchor=False, divider="blue")
 st.markdown("""
         👩🏻‍💼 Office: Guter Umfang mit Powerpoint, Excel und Word    
         💻 Programmiersprachen:HTML, Python  
-        👩🏻‍💻 Programmierung: Praktische Erfahrung in Python, Entwicklung kleine Website  
-        📊 Eigene Projekte: Konzeption und Umsetzung verschiedener Projekte inklusive diese Website  
+        👩🏻‍💻 Programmierung: Praktische Erfahrung in Python, Entwicklung kleiner Websiten  
+        📊 Eigene Projekte: Konzeption und Umsetzung verschiedener Projekte inklusive dieser Website  
         🎒 Schule: Fach Bereich IT mit positivem Erfolg 
             """,)  
 
@@ -92,7 +92,7 @@ st.write("")
 st.header("Interessen und Hobbys", anchor=False, divider="blue") 
 st.markdown("""
         💻 Programmieren (HTML, Streamlit, Python)  
-        🎹 Klavier spielen (Schloss die Musikschule -9 Studienjahre mit Auszeichnung ab)  
+        🎹 Klavier spielen (Schloss die Musikschule - 9 Studienjahre - mit Auszeichnung ab)  
         🏊🏻 Schwimmen (Ich schwimme seit 6 Jahr in einer Proffigruppe)  
         🧁 Kochen    
         🎶 Musik hören  
@@ -125,8 +125,8 @@ st.write("")
 
 left, right = st.columns(2)
 
-with left:
-        st.link_button("Zeugnis FMS4", "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite")
+# with left:
+#         st.link_button("Zeugnis FMS4", "https://de.wikipedia.org/wiki/Wikipedia:Hauptseite")
 
      
 with left:
